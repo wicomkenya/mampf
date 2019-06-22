@@ -60,7 +60,8 @@ import '../src/upload.coffee';
 import '../src/users.coffee';
 import '../src/vertices.coffee';
 
-import '../src/chapters.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+import '../src/chapters.css';
 import '../src/courses.scss';
 import '../src/lectures.scss';
 import '../src/lessons.scss';
