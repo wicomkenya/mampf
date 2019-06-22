@@ -52,16 +52,13 @@ gem 'devise'
 gem 'erubis'
 gem 'cancancan'
 gem 'jquery_file_download-rails'
-gem 'jquery-ui-rails'
 gem 'js-routes'
 gem 'i18n-js'
-gem 'bootstrap'
 gem "bootstrap_form", '>= 4.2.0'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'fuzzy-string-match'
 gem 'coveralls', require: false
 gem 'kaminari'
-gem "selectize-rails"
 gem 'acts_as_list'
 gem 'acts_as_tree'
 gem 'activerecord-import',

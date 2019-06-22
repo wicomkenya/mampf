@@ -93,10 +93,6 @@ GEM
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootstrap (4.3.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
     bootstrap_form (4.2.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -190,8 +186,6 @@ GEM
       nokogiri (>= 1.6)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
-    jquery-ui-rails (6.0.1)
-      railties (>= 3.2.16)
     jquery_file_download-rails (0.0.2)
       railties (>= 3.1.0)
     js-routes (1.4.6)
@@ -272,7 +266,6 @@ GEM
       ruby-rc4
       ttfunk
     pg (1.1.4)
-    popper_js (1.14.5)
     powerpack (0.1.2)
     public_suffix (3.1.0)
     puma (3.12.1)
@@ -386,7 +379,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selectize-rails (0.12.6)
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -505,7 +497,6 @@ DEPENDENCIES
   acts_as_list
   acts_as_tree
   bootsnap (>= 1.4.2)
-  bootstrap
   bootstrap_form (>= 4.2.0)
   byebug
   cancancan
@@ -524,7 +515,6 @@ DEPENDENCIES
   i18n-js
   image_processing (~> 1.2)
   jbuilder
-  jquery-ui-rails
   jquery_file_download-rails
   js-routes
   kaminari
@@ -545,7 +535,6 @@ DEPENDENCIES
   rubocop (~> 0.54.0)
   ruby-graphviz
   sass-rails (~> 5)
-  selectize-rails
   selenium-webdriver
   shrine
   spring

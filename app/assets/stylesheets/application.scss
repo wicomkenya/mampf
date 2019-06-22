@@ -1,169 +1,169 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
+// /*
+//  * This is a manifest file that'll be compiled into application.css, which will include all the files
+//  * listed below.
+//  *
+//  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+//  * vendor/assets/stylesheets directory can be referenced here using a relative path.
+//  *
+//  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+//  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+//  * files in this directory. Styles in this file should be added after the last require_* statement.
+//  * It is generally better to create a new file per style scope.
+//  *
+//  */
 
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "jquery-ui";
+// @import "bootstrap/functions";
+// @import "bootstrap/variables";
+// @import "jquery-ui";
 
-/* set the overriding variables */
-$grid-breakpoints: (
-  xxxs: 0,
-  xxs: 320px,
-  xs: 568px,
-  sm: 667px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1440px,
-  xxxl: 1600px,
-  xxxxl: 1920px,
-  xxxxxl: 2160px
-);
+// /* set the overriding variables */
+// $grid-breakpoints: (
+//   xxxs: 0,
+//   xxs: 320px,
+//   xs: 568px,
+//   sm: 667px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1440px,
+//   xxxl: 1600px,
+//   xxxxl: 1920px,
+//   xxxxxl: 2160px
+// );
 
-$container-max-widths: (
-  xxxs: 0,
-  xxs: 320px,
-  xs: 568px,
-  sm: 667px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1440px,
-  xxxl: 1600px,
-  xxxxl: 1920px,
-  xxxxxl: 2160px
-);
-
-
-/* override the !default vars with the values we set above */
-@import "bootstrap";
-@import "rails_bootstrap_forms";
-@import "*";
-@import 'selectize';
-@import 'selectize.default';
-@import "trix";
+// $container-max-widths: (
+//   xxxs: 0,
+//   xxs: 320px,
+//   xs: 568px,
+//   sm: 667px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1440px,
+//   xxxl: 1600px,
+//   xxxxl: 1920px,
+//   xxxxxl: 2160px
+// );
 
 
-trix-toolbar .trix-button-row {
-  flex-wrap: wrap;
-}
+// /* override the !default vars with the values we set above */
+// @import "bootstrap";
+// @import "rails_bootstrap_forms";
+// @import "*";
+// @import 'selectize';
+// @import 'selectize.default';
+// @import "trix";
 
 
-.kaviar-sidebar {
-  padding-left: 1rem;
-}
-
-.badge-light {
-  background-color: #dae0e5;
-}
-
-.badge-light[href]:hover {
-  background-color: #f8f9fa;
-}
-
-.no_display {
-  display: none;
-}
-
-.no-decoration {
-  text-decoration: none;
-}
-
-.smaller-font {
-  font-size: 0.75em;
-}
-
-.quiz
-{
-  font-family: 'Cabin', sans-serif;
-}
-
-.correct
-{
-  color: green;
-}
-
-.incorrect
-{
-  color: red;
-}
-
-.card-compact
-{
-  max-height: 50vh;
-  overflow-y: scroll;
-}
-
-.card-tiny
-{
-  max-height: 30vh;
-  overflow-y: scroll;
-}
+// trix-toolbar .trix-button-row {
+//   flex-wrap: wrap;
+// }
 
 
-$modal-xl:                    1140px !default;
-$modal-xxl:                   1600px !default;
+// .kaviar-sidebar {
+//   padding-left: 1rem;
+// }
 
-@include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
-}
+// .badge-light {
+//   background-color: #dae0e5;
+// }
 
-@include media-breakpoint-up(xxl) {
-  .modal-xxl { max-width: $modal-xxl; }
-}
+// .badge-light[href]:hover {
+//   background-color: #f8f9fa;
+// }
+
+// .no_display {
+//   display: none;
+// }
+
+// .no-decoration {
+//   text-decoration: none;
+// }
+
+// .smaller-font {
+//   font-size: 0.75em;
+// }
+
+// .quiz
+// {
+//   font-family: 'Cabin', sans-serif;
+// }
+
+// .correct
+// {
+//   color: green;
+// }
+
+// .incorrect
+// {
+//   color: red;
+// }
+
+// .card-compact
+// {
+//   max-height: 50vh;
+//   overflow-y: scroll;
+// }
+
+// .card-tiny
+// {
+//   max-height: 30vh;
+//   overflow-y: scroll;
+// }
 
 
-.dropdown-menu a {
-  text-decoration: none;
-  color: black;
-}
+// $modal-xl:                    1140px !default;
+// $modal-xxl:                   1600px !default;
 
-.dropdown-submenu {
-  position: relative;
-}
+// @include media-breakpoint-up(xl) {
+//   .modal-xl { max-width: $modal-xl; }
+// }
 
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-}
+// @include media-breakpoint-up(xxl) {
+//   .modal-xxl { max-width: $modal-xxl; }
+// }
 
 
-.card-columns {
-  @include media-breakpoint-only(xxxxl) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(xxxl) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(xxxl) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(xxl) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 1;
-  }
-  @include media-breakpoint-only(lg) {
-    column-count: 1;
-  }
-  @include media-breakpoint-only(md) {
-    column-count: 1;
-  }
-  @include media-breakpoint-only(sm) {
-    column-count: 1;
-  }
-}
+// .dropdown-menu a {
+//   text-decoration: none;
+//   color: black;
+// }
+
+// .dropdown-submenu {
+//   position: relative;
+// }
+
+// .dropdown-submenu .dropdown-menu {
+//   top: 0;
+//   left: 100%;
+//   margin-top: -1px;
+// }
+
+
+// .card-columns {
+//   @include media-breakpoint-only(xxxxl) {
+//     column-count: 2;
+//   }
+//   @include media-breakpoint-only(xxxl) {
+//     column-count: 2;
+//   }
+//   @include media-breakpoint-only(xxxl) {
+//     column-count: 2;
+//   }
+//   @include media-breakpoint-only(xxl) {
+//     column-count: 2;
+//   }
+//   @include media-breakpoint-only(xl) {
+//     column-count: 1;
+//   }
+//   @include media-breakpoint-only(lg) {
+//     column-count: 1;
+//   }
+//   @include media-breakpoint-only(md) {
+//     column-count: 1;
+//   }
+//   @include media-breakpoint-only(sm) {
+//     column-count: 1;
+//   }
+// }
 
