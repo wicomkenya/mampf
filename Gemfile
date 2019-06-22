@@ -51,7 +51,6 @@ gem 'pg'
 gem 'devise'
 gem 'erubis'
 gem 'cancancan'
-gem 'jquery-rails'
 gem 'jquery_file_download-rails'
 gem 'jquery-ui-rails'
 gem 'js-routes'
@@ -76,6 +75,7 @@ gem 'kaminari-i18n'
 gem 'trix-rails', require: 'trix'
 gem 'ruby-graphviz'
 gem 'xkcd'
+gem 'webpacker', '~> 4.x'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

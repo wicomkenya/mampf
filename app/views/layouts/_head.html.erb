@@ -2,7 +2,7 @@
   <%= full_title(yield(:title)) %>
 </title>
 <%= csrf_meta_tags %>
-<%= stylesheet_link_tag 'application',
+<%#= stylesheet_link_tag 'application',
                         media: 'all',
                         'data-turbolinks-track': 'reload' %>
 <link rel="stylesheet"
@@ -13,8 +13,12 @@
       rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Roboto'
       rel='stylesheet'>
-<%= javascript_include_tag 'application',
-                           'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application',
+                        'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'chapters',
+                        media: 'all',
+                        'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag "translations", skip_pipeline: true %>
 <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uppy@1.2.0/dist/uppy.min.js">
