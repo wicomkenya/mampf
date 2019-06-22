@@ -25,9 +25,9 @@ import Turbolinks from 'turbolinks';
 Rails.start();
 Turbolinks.start();
 
-import I18n from 'i18n-js';
+import Routes from '../src/js-routes.js.erb';
 
-import 'bootstrap';
+window.Routes = Routes;
 
 import '../src/index.js';
 import '../src/administration.coffee';
@@ -40,7 +40,6 @@ import '../src/items.coffee';
 import '../src/katex.coffee';
 import '../src/lectures.coffee';
 import '../src/lessons.coffee';
-import '../src/localization.coffee';
 import '../src/main.coffee';
 import '../src/media.coffee';
 import '../src/notifications.coffee';
@@ -59,6 +58,8 @@ import '../src/thyme_editor.coffee';
 import '../src/upload.coffee';
 import '../src/users.coffee';
 import '../src/vertices.coffee';
+import '../src/localization.coffee';
+import '../src/selectize_turbolinks_fix.coffee';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../src/application.scss';
