@@ -81,14 +81,9 @@ class TutorialsController < ApplicationController
   end
 
   def bulk_upload
-    attacher = ZipUploader::Attacher.new(cache: :submission_cache)
-    attacher.assign(params[:package])
-    @errors = attacher.errors
-    return if @errors.present?
-    return unless attacher.file
-    zipfile = attacher.file.to_io
-    @report = Submission.unzip_corrections!(@tutorial, @assignment, zipfile)
-    attacher.destroy
+    print("ERR:",params[:files])
+    files = JSON.parse(params[:files])
+    @report = Submission.bulk_corrections!(@tutorial, @assignment, files)
     @stack = @assignment.submissions.where(tutorial: @tutorial).proper
                         .order(:last_modification_by_users_at)
   end
