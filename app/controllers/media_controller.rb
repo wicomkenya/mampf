@@ -3,7 +3,7 @@ class MediaController < ApplicationController
   skip_before_action :authenticate_user!, only: [:play, :display]
   before_action :set_medium, except: [:index, :catalog, :new, :create, :search,
                                       :fill_teachable_select,
-                                      :fill_media_select]
+                                      :fill_media_select,:upload_video_check]
   before_action :set_lecture, only: [:index]
   before_action :set_teachable, only: [:new]
   before_action :sanitize_params, only: [:index]
@@ -42,7 +42,13 @@ class MediaController < ApplicationController
     I18n.locale = @medium.locale_with_inheritance
     @manuscript = Manuscript.new(@medium)
   end
-
+  def upload_video_check
+    media = Medium.find_by_id(params[:id])
+    return head :forbidden if media.nil?
+    return head :ok if current_user.admin?
+    return head :forbidden if !media.edited_with_inheritance_by?(current_user) 
+    return head :ok 
+  end
   def update
     I18n.locale = @medium.locale_with_inheritance
     old_manuscript_data = @medium.manuscript_data

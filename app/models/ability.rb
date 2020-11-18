@@ -273,8 +273,8 @@ class Ability
       can :validate, QuizCertificate do |quiz_certificate|
         user.tutor?
       end
-
       can :delete_account, User
     end
+    can :upload_video_check, Medium
   end
 end

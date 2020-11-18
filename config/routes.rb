@@ -430,7 +430,8 @@ Rails.application.routes.draw do
                        as: 'sponsors'
   get 'main/start', to: 'main#start',
                     as: 'start'
-
+  
+  get 'media/:id/upload_vid', to: 'media#upload_video_check'
   mount ScreenshotUploader.upload_endpoint(:cache) => "/screenshots/upload"
   mount VideoUploader.upload_endpoint(:cache) => "/videos/upload"
   mount PdfUploader.upload_endpoint(:cache) => "/pdfs/upload"
