@@ -67,8 +67,8 @@ services:
       MAMPF_REGISTRATION_TIMEFRAME: 25
       MAMPF_MAX_REGISTRATION_PER_TIMEFRAME: 40
       # uncomment DB_SQL_PRESEED_URL and UPLOADS_PRESEED_URL to enable db preseeding
-      # DB_SQL_PRESEED_URL: "https://heibox.uni-heidelberg.de/d/6fb4a9d2e7f54d8b9931/files/?p=%2F20200907123000_mampf.sql&dl=1"
-      # UPLOADS_PRESEED_URL: "https://heibox.uni-heidelberg.de/f/d2f72a4069814debaf69/?dl=1"
+      DB_SQL_PRESEED_URL: "https://heibox.uni-heidelberg.de/d/6fb4a9d2e7f54d8b9931/files/?p=%2F20200907123000_mampf.sql&dl=1"
+      UPLOADS_PRESEED_URL: "https://heibox.uni-heidelberg.de/f/d2f72a4069814debaf69/?dl=1"
     volumes:
       - type: bind
         source: ../../
@@ -81,6 +81,28 @@ services:
       - solr
       - redis
       - mailcatcher
+  uploader:
+    image: pgaertig/nginx-big-upload:latest
+    restart: always
+    volumes:
+      - type: bind
+        source: ./uploader_nginx.conf
+        target: /etc/nginx/nginx.conf
+      - type: bind
+        source: ./uploader.html
+        target: /var/www/index.html
+      - type: bind
+        source: ../../public/uploads/cache
+        target: /storage
+    ports:
+      - '127.0.0.1:8021:80'
+    environment:
+      DOCKER: 1
+      ACCESS_LOG_STDOUT: 1
+      ERROR_LOG_STDERR: 1
+      #AUTORELOAD: 1
+      #AUTORELOAD_CHECK_INTERVAL: 5
+      #AUTORELOAD_DEBUG: 1
 
 volumes:
   db-data:

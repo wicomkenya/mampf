@@ -17,6 +17,7 @@ check_for_preseeds() {
     wget --content-disposition --directory-prefix=public/ --timestamping --progress=dot:mega $UPLOADS_PRESEED_URL
     mkdir -p public/uploads
     bsdtar -xvf public/uploads.zip -s'|[^/]*/||' -C public/uploads
+    chmod 775 public/uploads/cache
   fi
 }
 
