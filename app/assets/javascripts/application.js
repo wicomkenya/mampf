@@ -53,6 +53,7 @@
 //= require tex_preview
 //= require thyme
 //= require thyme_editor
+//= require chunked_upload
 //= require upload
 //= require users
 //= require vertices
